@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: "postgres://avnadmin:AVNS_B3cVlMKO-MgS-6n12xx@pg-2c83c380-gsk2025.c.aivencloud.com:27580/defaultdb?sslmode=require"
+    healthCheckPath: /
